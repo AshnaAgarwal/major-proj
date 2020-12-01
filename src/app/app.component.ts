@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'membership-app';
+
+  onSignIn(googleUser) {
+    let profile = googleUser.getBasicProfile();
+    console.log(profile.getName());    
+  }
+
+  clicked() {
+    alert('Logged in as: ');
+  }
 }
